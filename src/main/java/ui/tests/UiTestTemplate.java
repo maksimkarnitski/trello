@@ -1,11 +1,12 @@
-package tests;
+package ui.tests;
 
-import core.DriverFactory;
-import core.Unilities.PropertyReader;
+import common.Log;
+import ui.core.driver.DriverFactory;
+import common.PropertyReader;
 import org.testng.annotations.BeforeClass;
-import steps.Login;
+import ui.steps.Login;
 
-public class TestTemplate {
+public class UiTestTemplate {
     PropertyReader propertyReader = new PropertyReader();
 
     @BeforeClass(description = "config")
@@ -18,5 +19,6 @@ public class TestTemplate {
     public void login() {
         Login login = new Login();
         login.regularLoginByDefaultUser();
+        Log.info("Logged in successfully as user " + propertyReader.getUsername());
     }
 }

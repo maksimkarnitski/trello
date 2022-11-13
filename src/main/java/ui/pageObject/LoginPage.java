@@ -1,7 +1,7 @@
-package pageObject;
+package ui.pageObject;
 
-import core.DriverFactory;
-import core.Unilities.Wait;
+import ui.core.driver.DriverFactory;
+import ui.core.unilities.Wait;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

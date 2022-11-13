@@ -1,9 +1,9 @@
-package core.Unilities;
+package ui.core.unilities;
 
-import core.DriverFactory;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import ui.core.driver.DriverFactory;
 
 import java.time.Duration;
 

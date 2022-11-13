@@ -1,7 +1,7 @@
-package steps;
+package ui.steps;
 
-import core.Unilities.PropertyReader;
-import pageObject.LoginPage;
+import common.PropertyReader;
+import ui.pageObject.LoginPage;
 
 public class Login {
     LoginPage loginPage = new LoginPage();

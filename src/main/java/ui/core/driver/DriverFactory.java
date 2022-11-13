@@ -1,9 +1,9 @@
-package core;
+package ui.core.driver;
 
-import core.Unilities.PropertyReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import common.PropertyReader;
 
 public class DriverFactory {
     private static ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();

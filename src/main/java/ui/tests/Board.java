@@ -1,13 +1,13 @@
-package tests;
+package ui.tests;
 
-import core.DriverFactory;
+import ui.core.driver.DriverFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pageObject.BoardPage;
-import pageObject.BoardsPage;
+import ui.pageObject.BoardPage;
+import ui.pageObject.BoardsPage;
 
-public class Board extends TestTemplate {
+public class Board extends UiTestTemplate {
     BoardsPage boardsPage;
     BoardPage boardPage;
 

@@ -1,4 +1,4 @@
-package core.Unilities;
+package common;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -35,6 +35,14 @@ public class PropertyReader {
     public String getLoginUrl() {
         return properties.getProperty("loginUrl");
     }
-
+    public String getBaseApiUrlProperty() {
+        return properties.getProperty("baseApiUrl");
+    }
+    public String getToken() {
+        return properties.getProperty("token");
+    }
+    public String getApiKey() {
+        return properties.getProperty("apiKey");
+    }
 
 }
