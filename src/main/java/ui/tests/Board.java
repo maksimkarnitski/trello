@@ -1,5 +1,6 @@
 package ui.tests;
 
+import common.Log;
 import ui.core.driver.DriverFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -19,9 +20,10 @@ public class Board extends UiTestTemplate {
 
     @Test(description = "Create New Board", priority = 1)
     public void createNewBoard() {
-        String boardName = "abc";
+        String boardName = "New Board";
         boardsSteps.createNewBoard(boardName);
+        Log.info("Board with name " + boardName + " is created");
         Assert.assertEquals(singleBoardSteps.getBoardName(), boardName);
-        Assert.assertTrue(DriverFactory.getDriver().getCurrentUrl().contains(boardName.toLowerCase()));
+        Assert.assertTrue(DriverFactory.getDriver().getCurrentUrl().contains(boardName.toLowerCase().replace("\s", "-")));
     }
 }

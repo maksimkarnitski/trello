@@ -12,6 +12,7 @@ public class UiTestTemplate {
 
     @BeforeClass(description = "config")
     public void configuration() {
+        Log.info("Initialize browser");
         DriverFactory.getDriver().manage().window().maximize();
         DriverFactory.getDriver().get(propertyReader.getLoginUrl());
     }
