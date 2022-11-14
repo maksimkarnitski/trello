@@ -3,8 +3,7 @@
 <suite name="Suite" verbose="3">
     <test name="Tests">
         <classes>
-<!--            <class name="api.tests.Board"></class>-->
-            <class name="ui.tests.Board"></class>
+            <class name="ui.Runner"></class>
         </classes>
     </test>
 </suite>
