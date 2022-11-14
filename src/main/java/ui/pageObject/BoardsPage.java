@@ -24,10 +24,14 @@ public class BoardsPage {
     }
 
     public void createNewBoard(String boardName) {
-        Wait.forElement(createNewBoardTile);
-        createNewBoardTile.click();
+        initiateBoardCreation();
         Wait.forElement(createBoardTitleInput);
         createBoardTitleInput.sendKeys(boardName);
         createBoardSubmitButton.click();
+    }
+
+    public void initiateBoardCreation() {
+        Wait.forElement(createNewBoardTile);
+        createNewBoardTile.click();
     }
 }

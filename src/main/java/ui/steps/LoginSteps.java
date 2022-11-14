@@ -3,7 +3,7 @@ package ui.steps;
 import common.PropertyReader;
 import ui.pageObject.LoginPage;
 
-public class Login {
+public class LoginSteps {
     LoginPage loginPage = new LoginPage();
     PropertyReader propertyReader = new PropertyReader();
 

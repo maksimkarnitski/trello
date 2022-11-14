@@ -6,11 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class BoardPage {
+public class SingleBoardPage {
     @FindBy(xpath = ".//div[contains(@class, 'board-header')]//h1")
     WebElement boardNameInHeader;
 
-    public BoardPage() {
+    public SingleBoardPage() {
         PageFactory.initElements(DriverFactory.getDriver(), this);
     }
 

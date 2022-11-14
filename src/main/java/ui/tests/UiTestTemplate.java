@@ -1,10 +1,11 @@
 package ui.tests;
 
 import common.Log;
+import org.testng.annotations.AfterClass;
 import ui.core.driver.DriverFactory;
 import common.PropertyReader;
 import org.testng.annotations.BeforeClass;
-import ui.steps.Login;
+import ui.steps.LoginSteps;
 
 public class UiTestTemplate {
     PropertyReader propertyReader = new PropertyReader();
@@ -17,8 +18,13 @@ public class UiTestTemplate {
 
     @BeforeClass(description = "Login")
     public void login() {
-        Login login = new Login();
-        login.regularLoginByDefaultUser();
+        LoginSteps loginSteps = new LoginSteps();
+        loginSteps.regularLoginByDefaultUser();
         Log.info("Logged in successfully as user " + propertyReader.getUsername());
+    }
+
+    @AfterClass(description = "Close driver")
+    public void closeDriver() {
+        DriverFactory.closeDriver();
     }
 }

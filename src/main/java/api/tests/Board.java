@@ -5,10 +5,26 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.notNullValue;
 
 public class Board extends ApiTestTemplate{
     String boardPath = "/1/boards/{id}";
+
+    String boardsPath = "/1/boards";
     String idForGet = "F7UrFeYy";
+
+    @Test
+    void createBoard() {
+            given()
+                .spec(specPostRequest)
+                .queryParam("name", "New Board")
+            .when()
+                .post(boardsPath)
+            .then()
+                    .statusCode(200)
+                    .assertThat().body("id", notNullValue());
+    }
+
     @Test
     void getBoard() {
         BoardGet bodyResponse =

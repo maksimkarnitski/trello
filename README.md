@@ -1,7 +1,7 @@
 ##General Info
 This project is test framework for Trello that includes ui and api tests
 
-##Run instuction
+##Run instruction
 1. Specify properties in test.properties file
 2. Specify tests in testng.xml
 3. Run testgn.xml
@@ -9,3 +9,4 @@ This project is test framework for Trello that includes ui and api tests
 ##To Do
 1. Logging
 2. BDD
+3. Securely store tokens
